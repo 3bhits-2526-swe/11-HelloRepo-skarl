@@ -12,6 +12,11 @@ namespace FreezePlayer
             Events.Add("FreezePlayer", PlayerFreeze);
         }
 
+        public void PlayerFreeze(object [] args)
+        {
+            RAGE.Elements.Player.LocalPlayer.FreezePosition((bool)args[0]);
+        }
+
     }
 
 }
